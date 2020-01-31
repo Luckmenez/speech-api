@@ -23,7 +23,11 @@ export default {
 
     enviar_voz: function(){
       try {
-        alert(window.TTS);    
+    window.TTS.speak('Welcome to my awesome app', function () {
+        console.log('Ready !');
+    }, function (reason) {
+        console.log(reason);
+    });    
       } catch (e) {
         alert(e);
       }
